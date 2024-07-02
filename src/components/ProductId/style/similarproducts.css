@@ -1,0 +1,16 @@
+.similarProduct__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.similarProduct__title{
+    color: var(--dark-color);
+    padding: 0.5rem;
+}
+
+.similarProduct__products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

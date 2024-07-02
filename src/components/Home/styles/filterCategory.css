@@ -1,0 +1,36 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-content: flex-end;
+    align-items: flex-start;
+}
+
+.category_filter {
+    display: flex;
+    flex-direction: row;
+    color: var(--dark-color);
+}
+
+.category_line {
+    border-style: inset;
+    border-width: 1px;
+    width: 100%;
+    margin: 0.5rem 0 ;
+}
+
+.category__item-Products{
+    font-size: 16px;
+}
+
+.category__list {
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+    .category {
+        margin-top: 3em;
+        margin-left: 1.05rem;
+    }
+}

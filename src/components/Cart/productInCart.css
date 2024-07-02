@@ -1,0 +1,79 @@
+.prodcart {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+}
+
+.prodcart * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.prodcart__img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.prodcart__title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.prodcart__delete {
+  font-size: 18px;
+  width: 2em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--dark-color);
+  color: white;
+  transition: transform 200ms ease;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+}
+.prodcart__delete:hover {
+  transform: scale(1.1);
+  filter: brightness(1.15);
+  background-color: var(--main-color);
+}
+.prodcart__delete:active {
+  background-color: var(--main-color);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.prodcart__footer {
+  grid-column: span 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+.prodcart__quantity {
+  border: 1px solid var(--gray-color);
+  padding: 0.2em 1em;
+}
+.prodcart__subtotal {
+  display: flex;
+  gap: 1em;
+}
+.prodcart__subtotal-label {
+  font-weight: 300;
+  font-size: 10px;
+}
+.prodcart__subtotal-value {
+  font-weight: 700;
+}
+.prodcart__subtotal-value::before {
+  content: "$";
+  padding-right: 0.3em;
+}
+
+@media screen and (min-width: 768px) {
+  .prodcart {
+    flex-direction: row;
+  }
+}
