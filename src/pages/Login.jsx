@@ -8,14 +8,14 @@ import axios from "axios";
 
 const Login = () => {
   const { loginUser } = useAuthentication();
-  const navigate = useNavigate(); //
+  const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [ nameUserLogged, setNameUserLogged] = useState('')
 
   useEffect(() => {
-    axios.get('https://e-commerce-api-v2.academlo.tech/api/v1/users/me', {
+    axios.get('http://localhost:8080/api/v1/users/me', {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -39,7 +39,7 @@ const Login = () => {
     const password = e.target.password.value;
     const data = { email, password };
     try {
-      const tokenResponse = await loginUser(data); //
+      const tokenResponse = await loginUser(data);
       localStorage.setItem("token", tokenResponse?.data?.token);
       callback(true);
     } catch (error) {

@@ -7,7 +7,7 @@ const ProductPurchases = ({ prodPurchases }) => {
     <article className="prodpurchases__container ">
       <img
         className="prodpurchases__img f-grow"
-        src={prodPurchases?.product.images[0].url}
+        src={prodPurchases?.product.productImgs[0].url}
         alt=""
       />
       <h3 className="prodpurchases__prod f-grow">

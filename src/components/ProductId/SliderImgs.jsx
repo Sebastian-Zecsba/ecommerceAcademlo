@@ -28,13 +28,14 @@ const SliderImgs = ({ product }) => {
     }
   };
 
+  console.log(product)
   return (
     <div className="slider">
       <button onClick={handlePrev} className="slider__arrowhead slider__left">
         <i className="bx bx-chevron-left"></i>
       </button>
       <div style={objStyle} className="slider__interior">
-        {product?.images.map((imgInfo) => (
+        {product?.productImgs?.map((imgInfo) => (
           <div key={imgInfo.id} className="slider__img-container">
             <img className="slider__img" src={imgInfo.url} alt="" />
           </div>
@@ -44,7 +45,7 @@ const SliderImgs = ({ product }) => {
         <i className="bx bx-chevron-right"></i>
       </button>
       <ul style={objStyle2} className="slider__interior2">
-        {product?.images.map((imgInfo, i) => (
+        {product?.productImgs.map((imgInfo, i) => (
           <li
             key={imgInfo.id}
             className={numberImg === i - 1 + 1 ? "selected" : ""}
