@@ -12,7 +12,7 @@ const ProductInCart = ({ prodCart }) => {
     <article className="prodcart">
       <img
         className="prodcart__img"
-        src={prodCart.product.productImgs[0].url}
+        src={prodCart.product.images[0].url}
         alt=""
       />
       <h3 className="prodcart__title">{prodCart.product.title}</h3>
